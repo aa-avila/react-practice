@@ -1,9 +1,10 @@
-import Button from '@mui/material/Button';
+import { Button } from '@mui/material';
 
 function ButtonClickAlert(props) {
   return (
     <Button
       variant="contained"
+      size="small"
       onClick={() => {
         alert('clicked');
       }}
