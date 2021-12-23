@@ -1,5 +1,11 @@
+import Container from '@mui/material/Container';
+
 function Page1() {
-  return <div>Pagina 1</div>;
+  return (
+    <Container>
+      <p>Esta es la Pagina 1.</p>
+    </Container>
+  );
 }
 
 export default Page1;

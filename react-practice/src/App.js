@@ -10,25 +10,23 @@ import Page3 from './pages/Page3';
 
 function App() {
   return (
-    <>
-      <Container className="App" maxWidth="md">
-        <MainNavigation />
-        <Switch>
-          <Route path="/" exact>
-            <HomePage />
-          </Route>
-          <Route path="/page1">
-            <Page1 />
-          </Route>
-          <Route path="/page2">
-            <Page2 />
-          </Route>
-          <Route path="/page3">
-            <Page3 />
-          </Route>
-        </Switch>
-      </Container>
-    </>
+    <Container className="App" maxWidth="md">
+      <MainNavigation />
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+        <Route path="/page1">
+          <Page1 />
+        </Route>
+        <Route path="/page2">
+          <Page2 />
+        </Route>
+        <Route path="/page3">
+          <Page3 />
+        </Route>
+      </Switch>
+    </Container>
   );
 }
 
