@@ -1,10 +1,15 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 function HomePage() {
   return (
-    <Container>
-      <p>Esta es la Home Page. Por ahora no hay nada aqui.</p>
-    </Container>
+    <>
+      <Typography variant="h6" component="h6" sx={{ p: 2 }}>
+        Esta es la Home Page. Por ahora no hay nada aqui.
+      </Typography>
+      <Container>
+        <p>Contenido blablebli.</p>
+      </Container>
+    </>
   );
 }
 
