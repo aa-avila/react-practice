@@ -17,9 +17,13 @@ function BoxFunction(props) {
     <Box
       sx={{
         marginY: 2,
-        width: 200,
-        height: 200,
-        backgroundColor: bgColor
+        width: 100,
+        height: 100,
+        backgroundColor: bgColor,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}
     >
       <h1>{textBox}</h1>
