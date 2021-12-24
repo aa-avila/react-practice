@@ -10,7 +10,7 @@ import Page3 from './pages/Page3';
 
 function App() {
   return (
-    <Container className="App">
+    <Container className="App" maxWidth="md">
       <MainNavigation />
       <Switch>
         <Route path="/" exact>
