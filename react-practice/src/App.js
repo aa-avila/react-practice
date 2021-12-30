@@ -1,5 +1,6 @@
 import './App.css';
 import Container from '@mui/material/Container';
+
 import { Route, Switch } from 'react-router-dom';
 
 import MainNavigation from './components/layout/MainNavigation';
@@ -14,6 +15,9 @@ function App() {
       <MainNavigation />
       <Switch>
         <Route path="/" exact>
+          <HomePage />
+        </Route>{' '}
+        <Route path="/react-practice">
           <HomePage />
         </Route>
         <Route path="/page1">
