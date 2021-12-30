@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useContext } from 'react';
 import UserContext from '../../store/user-context';
+import { Box } from '@mui/material';
 
 function UserForm() {
   const userCtx = useContext(UserContext);
@@ -22,7 +23,9 @@ function UserForm() {
   }
 
   return (
-    <div>
+    <Box sx={{ p: 2, width: '45%', boxShadow: 2, bgcolor: '#fff' }}>
+      <h4>Ingrese su nombre y apellido:</h4>
+
       <form onSubmit={submitHandler}>
         <div>
           <label htmlFor="name">Nombre:</label>
@@ -37,8 +40,13 @@ function UserForm() {
         <div>
           <button>Guardar</button>
         </div>
+        <br></br>
+        <i>
+          Estos datos se guardan en el UserContext y estan disponibles en todos
+          los componentes de la app.
+        </i>
       </form>
-    </div>
+    </Box>
   );
 }
 

@@ -8,8 +8,13 @@ function HomePage() {
       <Typography variant="h6" component="h6" sx={{ p: 2 }}>
         Esta es la Home Page.
       </Typography>
-      <Container>
-        <p>Ingrese su nombre y apellido:</p>
+      <Container
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around'
+        }}
+      >
         <UserForm />
         <UserFullName />
       </Container>
