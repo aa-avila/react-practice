@@ -1,6 +1,10 @@
 import { useRef } from 'react';
+import { useContext } from 'react';
+import UserContext from '../../store/user-context';
 
 function UserForm() {
+  const userCtx = useContext(UserContext);
+
   const nameInputRef = useRef();
   const lastnameInputRef = useRef();
 
@@ -14,7 +18,7 @@ function UserForm() {
       lastname: enteredLastname
     };
 
-    console.log(userData);
+    userCtx.saveUser(userData);
   }
 
   return (
@@ -31,7 +35,7 @@ function UserForm() {
         </div>
         <br></br>
         <div>
-          <button>OK</button>
+          <button>Guardar</button>
         </div>
       </form>
     </div>
