@@ -1,13 +1,15 @@
 import { Container, Typography } from '@mui/material';
+import UserForm from '../components/userForm/UserForm';
 
 function HomePage() {
   return (
     <>
       <Typography variant="h6" component="h6" sx={{ p: 2 }}>
-        Esta es la Home Page. Por ahora no hay nada aqui.
+        Esta es la Home Page.
       </Typography>
       <Container>
-        <p>Contenido blablebli.</p>
+        <p>Ingrese su nombre y apellido:</p>
+        <UserForm />
       </Container>
     </>
   );
