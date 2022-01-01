@@ -9,16 +9,16 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/react-practice">Home</Link>
           </li>
           <li>
-            <Link to="/page1">Pagina 1</Link>
+            <Link to="/react-practice/page1">Pagina 1</Link>
           </li>
           <li>
-            <Link to="/page2">Pagina 2</Link>
+            <Link to="/react-practice/page2">Pagina 2</Link>
           </li>
           <li>
-            <Link to="/page3">Pagina 3</Link>
+            <Link to="/react-practice/page3">Pagina 3</Link>
           </li>
         </ul>
       </nav>

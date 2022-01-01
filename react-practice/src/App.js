@@ -14,19 +14,16 @@ function App() {
     <Container className="App" maxWidth="md">
       <MainNavigation />
       <Switch>
-        <Route path="/" exact>
-          <HomePage />
-        </Route>{' '}
-        <Route path="/react-practice">
+        <Route path="/react-practice" exact>
           <HomePage />
         </Route>
-        <Route path="/page1">
+        <Route path="/react-practice/page1">
           <Page1 />
         </Route>
-        <Route path="/page2">
+        <Route path="/react-practice/page2">
           <Page2 />
         </Route>
-        <Route path="/page3">
+        <Route path="/react-practice/page3">
           <Page3 />
         </Route>
       </Switch>
