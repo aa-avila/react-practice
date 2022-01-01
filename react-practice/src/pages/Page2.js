@@ -1,6 +1,6 @@
 import { Container, Typography } from '@mui/material';
-
-import ToggleBox from '../components/toggleBox/ToggleBox';
+import UserForm from '../components/userForm/UserForm';
+import UserFullName from '../components/userData/UserFullName';
 
 function Page2() {
   return (
@@ -15,10 +15,8 @@ function Page2() {
           justifyContent: 'space-around'
         }}
       >
-        <ToggleBox title="ToggleBox 1" />
-        <ToggleBox title="ToggleBox 2" />
-        <ToggleBox title="Otro texto 3" />
-        <ToggleBox title="lalala 4" />
+        <UserForm />
+        <UserFullName />
       </Container>
     </>
   );

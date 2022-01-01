@@ -1,28 +1,24 @@
 import { Container, Typography } from '@mui/material';
-import ButtonClickAlert from '../components/ButtonClickAlert';
+
+import ToggleBox from '../components/toggleBox/ToggleBox';
 
 function Page1() {
   return (
     <>
-      <Typography variant="h5" component="h5" sx={{ p: 2 }}>
-        Esta es la Pagina 1
+      <Typography variant="h6" component="h6" sx={{ p: 2 }}>
+        Esta es la Pagina 1.
       </Typography>
-      <Container>
-        <p>Este es un parrafo comun, un "p" de html.</p>
-        <Typography variant="p" component="p">
-          En cambio esto es un componente "Typography" de MUI. Variant "p" y
-          component "p".
-        </Typography>
-
-        <h4>Esto es un h4 html</h4>
-        <Typography variant="h4" component="h4">
-          Y esto es un componente "Typography" de MUI. Variant "h4" y component
-          "h4".
-        </Typography>
-
-        <br></br>
-
-        <ButtonClickAlert text="Clickeame!" />
+      <Container
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around'
+        }}
+      >
+        <ToggleBox title="ToggleBox 1" />
+        <ToggleBox title="ToggleBox 2" />
+        <ToggleBox title="Otro texto 3" />
+        <ToggleBox title="lalala 4" />
       </Container>
     </>
   );
