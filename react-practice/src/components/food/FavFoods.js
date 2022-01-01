@@ -9,6 +9,15 @@ function FavFoods() {
   const [food2, setFood2] = useState('');
   const [food3, setFood3] = useState('');
 
+  // Setea los valores previamente ingresados (evita que se "borre" al cambiar de pagina)
+  // se ejecuta solo al cargar la pagina
+  useEffect(() => {
+    setFood1(foodCtx.food1);
+    setFood2(foodCtx.food2);
+    setFood3(foodCtx.food3);
+  }, []);
+
+  // Actualiza los datos del context con cada cambio de cada input
   useEffect(() => {
     const foodsData = {
       food1: food1,

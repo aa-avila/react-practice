@@ -7,13 +7,16 @@ import './index.css';
 import App from './App';
 
 import { UserContextProvider } from './store/user-context';
+import { FoodContextProvider } from './store/food-context';
 
 ReactDOM.render(
   <React.StrictMode>
     <UserContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <FoodContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </FoodContextProvider>
     </UserContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
