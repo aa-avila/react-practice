@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
 
 function BoxFunction(props) {
   const boxState = props.boxState;

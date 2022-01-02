@@ -2,7 +2,8 @@ import validate from 'validate.js';
 import { useContext } from 'react';
 import FoodContext from '../../store/food-context';
 
-import { Box, Typography } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 function FoodList() {
   const foodCtx = useContext(FoodContext);

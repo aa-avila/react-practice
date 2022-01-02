@@ -1,6 +1,8 @@
-import { Container, Typography } from '@mui/material';
 import FavFoods from '../components/food/FavFoods';
 import FoodList from '../components/food/FoodList';
+
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
 function Page3() {
   return (

@@ -1,6 +1,9 @@
 import { useContext, useState, useEffect } from 'react';
 import FoodContext from '../../store/food-context';
-import { Box, TextField, Typography } from '@mui/material';
+
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
 
 function FavFoods() {
   const foodCtx = useContext(FoodContext);

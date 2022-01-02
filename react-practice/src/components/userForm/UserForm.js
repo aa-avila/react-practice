@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useContext } from 'react';
 import UserContext from '../../store/user-context';
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
 
 function UserForm() {
   const userCtx = useContext(UserContext);

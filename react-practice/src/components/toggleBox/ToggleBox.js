@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import BoxFunction from './BoxFunction';
-import { Button, Card, Typography } from '@mui/material';
+
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
 
 function ToggleBox(props) {
   const [boxIsOn, setBoxIsOn] = useState(false);
