@@ -2,17 +2,18 @@
 
 Proyecto de práctica de ReactJS.
 
-## Conceptos abordados:
+## Conceptos abordados
 
 - Functional Components
 - React Router, Switch, Link
 - Props, useState, useEffect
 - useContext, ContextProvider
 
-## Extras:
+## Extras
 
 - Adicionalmente se incorporó el uso de la librería Material-UI
+  <https://mui.com/>
 
-## Deploy:
+## Deploy
 
-- https://aa-avila.github.io/react-practice
+- <https://aa-avila.github.io/react-practice>
