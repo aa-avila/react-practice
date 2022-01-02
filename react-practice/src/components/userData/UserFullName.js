@@ -4,7 +4,17 @@ import { Box } from '@mui/material';
 function UserFullName() {
   const userCtx = useContext(UserContext);
   return (
-    <Box sx={{ p: 2, width: '45%', boxShadow: 2, bgcolor: '#fff' }}>
+    <Box
+      sx={{
+        p: 2,
+        width: '45%',
+        boxShadow: 2,
+        bgcolor: '#fff',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+    >
       <h4>Datos de usuario guardados:</h4>
       <p>Nombre: {userCtx.name}</p>
       <p>Apellido: {userCtx.lastname}</p>

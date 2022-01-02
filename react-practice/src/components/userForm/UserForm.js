@@ -23,7 +23,17 @@ function UserForm() {
   }
 
   return (
-    <Box sx={{ p: 2, width: '45%', boxShadow: 2, bgcolor: '#fff' }}>
+    <Box
+      sx={{
+        p: 2,
+        width: '45%',
+        boxShadow: 2,
+        bgcolor: '#fff',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+    >
       <h4>Ingrese su nombre y apellido:</h4>
 
       <form onSubmit={submitHandler}>

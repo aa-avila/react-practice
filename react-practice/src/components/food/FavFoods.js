@@ -28,7 +28,17 @@ function FavFoods() {
   }, [food1, food2, food3]);
 
   return (
-    <Box sx={{ p: 2, width: '45%', boxShadow: 2, bgcolor: '#fff' }}>
+    <Box
+      sx={{
+        p: 2,
+        width: '45%',
+        boxShadow: 2,
+        bgcolor: '#fff',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+    >
       <Typography variant="h6" component="div" sx={{ mb: 1 }}>
         Mis comidas favoritas:
       </Typography>
@@ -57,6 +67,11 @@ function FavFoods() {
         value={food3}
         onChange={(e) => setFood3(e.target.value)}
       />
+      <br></br>
+      <br></br>
+      <div>
+        <i>Controlled Inputs, useContext, useEffect</i>
+      </div>
     </Box>
   );
 }

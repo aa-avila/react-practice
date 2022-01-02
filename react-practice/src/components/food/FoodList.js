@@ -28,7 +28,7 @@ function FoodList() {
 
     //1 item
     if (validatedFoodItems.length === 1) {
-      htmlText = `La única comida ques me gusta es ${validatedFoodItems[0]}.`;
+      htmlText = `La única comida que me gusta es ${validatedFoodItems[0]}.`;
     }
     //2 items
     if (validatedFoodItems.length === 2) {
@@ -50,8 +50,23 @@ function FoodList() {
   };
 
   return (
-    <Box sx={{ p: 2, width: '45%', boxShadow: 2, bgcolor: '#fff' }}>
+    <Box
+      sx={{
+        p: 2,
+        width: '45%',
+        boxShadow: 2,
+        bgcolor: '#fff',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+      }}
+    >
       <FoodText />
+      <br></br>
+      <br></br>
+      <div>
+        <i>validator.js, useContext</i>
+      </div>
     </Box>
   );
 }
