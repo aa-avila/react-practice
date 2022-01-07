@@ -20,6 +20,9 @@ function MainNavigation() {
           <li>
             <Link to="/react-practice/page3">Pagina 3</Link>
           </li>
+          <li>
+            <Link to="/react-practice/dogs">Dogs</Link>
+          </li>
         </ul>
       </nav>
     </header>

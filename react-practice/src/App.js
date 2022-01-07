@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
+import DogsPage from './pages/DogsPage';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/react-practice/page3">
           <Page3 />
+        </Route>
+        <Route path="/react-practice/dogs">
+          <DogsPage />
         </Route>
       </Switch>
     </Container>
