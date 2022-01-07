@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
+import ErrorIcon from '@mui/icons-material/Error';
 
 import axios from 'axios';
 
@@ -13,12 +16,15 @@ function DogsPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadErr, setIsLoadErr] = useState(false);
 
+  let dogUrl = '';
+
   const getRandomDog = async () => {
     try {
       setIsLoading(true);
       setIsLoaded(false);
-      const dog = await axios.get('https://dog.ceo/api/breeds/image/randomxcv');
-      console.log(dog);
+      const dog = await axios.get('https://dog.ceo/api/breeds/image/random');
+      dogUrl = dog.data.message;
+      console.log(dogUrl);
       setIsLoaded(true);
       setIsLoading(false);
       setIsLoadErr(false);
@@ -33,16 +39,24 @@ function DogsPage() {
   const imageComponent = () => {
     if (!isLoaded && !isLoading) {
       if (isLoadErr) {
-        return <p>Error</p>;
+        return <ErrorIcon sx={{ fontSize: '3rem' }} />;
       } else {
         return <p>Sin imagen</p>;
       }
     }
     if (!isLoaded && isLoading) {
-      return <p>cargando...</p>;
+      return <CircularProgress />;
     }
     if (isLoaded && !isLoading) {
-      return <p>imagen cargada</p>;
+      return (
+        <Box>
+          <img
+            //TODO: ingresar dogUrl dinamicamente
+            src="https://images.dog.ceo/breeds/tervuren/shadow_and_frisbee.jpg"
+            alt="imagen de perro aleatoria"
+          ></img>
+        </Box>
+      );
     }
   };
 
