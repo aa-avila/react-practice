@@ -11,25 +11,32 @@ function DogsPage() {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadErr, setIsLoadErr] = useState(false);
 
   const getRandomDog = async () => {
     try {
       setIsLoading(true);
       setIsLoaded(false);
-      const dog = await axios.get('https://dog.ceo/api/breeds/image/random');
+      const dog = await axios.get('https://dog.ceo/api/breeds/image/randomxcv');
       console.log(dog);
       setIsLoaded(true);
       setIsLoading(false);
+      setIsLoadErr(false);
     } catch (error) {
       setIsLoaded(false);
       setIsLoading(false);
+      setIsLoadErr(true);
       console.log(error);
     }
   };
 
   const imageComponent = () => {
     if (!isLoaded && !isLoading) {
-      return <p>sin imagen</p>;
+      if (isLoadErr) {
+        return <p>Error</p>;
+      } else {
+        return <p>Sin imagen</p>;
+      }
     }
     if (!isLoaded && isLoading) {
       return <p>cargando...</p>;
