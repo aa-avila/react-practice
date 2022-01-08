@@ -60,7 +60,7 @@ function RandomDog() {
         Random Dog
       </Button>
 
-      {image(dogUrl)}
+      {image()}
     </Box>
   );
 }
