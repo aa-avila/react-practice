@@ -1,8 +1,12 @@
 import { useState } from 'react';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import HideImageIcon from '@mui/icons-material/HideImage';
 import CircularProgress from '@mui/material/CircularProgress';
 import ErrorIcon from '@mui/icons-material/Error';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardMedia from '@mui/material/CardMedia';
 
 import axios from 'axios';
 
@@ -36,19 +40,50 @@ function RandomDog() {
       if (isLoadErr) {
         return <ErrorIcon sx={{ fontSize: '3rem' }} />;
       } else {
-        return <p>Sin imagen</p>;
+        return (
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: 150
+            }}
+          >
+            <HideImageIcon />
+          </Box>
+        );
       }
     }
     if (!isLoaded && isLoading) {
-      return <CircularProgress />;
+      return (
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: 150
+          }}
+        >
+          <CircularProgress />
+        </Box>
+      );
     }
     if (isLoaded && !isLoading) {
-      return <img src={dogUrl} alt="imagen de perro aleatoria" />;
+      return (
+        <CardMedia
+          component="img"
+          alt="green iguana"
+          height="150"
+          image={dogUrl}
+        />
+      );
     }
   };
 
   return (
-    <Box
+    <Card
       sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -56,12 +91,21 @@ function RandomDog() {
         width: '20%'
       }}
     >
-      <Button variant="contained" size="medium" onClick={getRandomDog}>
-        Random Dog
-      </Button>
-
       {image()}
-    </Box>
+
+      <CardActions
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: 2
+        }}
+      >
+        <Button variant="contained" size="small" onClick={getRandomDog}>
+          Random Dog
+        </Button>
+      </CardActions>
+    </Card>
   );
 }
 
