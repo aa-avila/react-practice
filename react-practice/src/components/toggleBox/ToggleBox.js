@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import BoxFunction from './BoxFunction';
 
 import Button from '@mui/material/Button';
@@ -10,11 +10,25 @@ function ToggleBox(props) {
 
   function handleBoxOn() {
     setBoxIsOn(true);
+    localStorage.setItem(props.boxId, 1);
   }
 
   function handleBoxOff() {
     setBoxIsOn(false);
+    localStorage.setItem(props.boxId, 0);
   }
+
+  useEffect(() => {
+    const storedBoxState = Number(localStorage.getItem(props.boxId));
+    // console.log(storedBoxState);
+
+    if (storedBoxState === 1) {
+      setBoxIsOn(true);
+    }
+    if (storedBoxState === 0) {
+      setBoxIsOn(false);
+    }
+  }, []);
 
   return (
     <Card

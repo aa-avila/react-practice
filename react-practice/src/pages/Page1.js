@@ -15,11 +15,18 @@ function Page1() {
           justifyContent: 'space-around'
         }}
       >
-        <ToggleBox title="ToggleBox 1" />
-        <ToggleBox title="ToggleBox 2" />
-        <ToggleBox title="Otro texto 3" />
-        <ToggleBox title="lalala 4" />
+        <ToggleBox boxId="box1" title="ToggleBox 1" />
+        <ToggleBox boxId="box2" title="ToggleBox 2" />
+        <ToggleBox boxId="box3" title="Otro texto 3" />
+        <ToggleBox boxId="box4" title="lalala 4" />
       </Container>
+      <br></br>
+      <i>
+        El estado de cada ToggleBox se guarda en el localStorage y es comprobado
+        en el primer render de la página mediante useEffect. Como resultado,
+        dichos estados no se pierden al cambiar de pagina o incluso al cerrar y
+        abrir el navegador.
+      </i>
     </>
   );
 }
