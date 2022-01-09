@@ -8,6 +8,7 @@ Proyecto de práctica de ReactJS.
 - React Router, Switch, Link
 - Props, useState, useEffect
 - useContext, ContextProvider
+- Local Storage
 
 ## Extras
 
